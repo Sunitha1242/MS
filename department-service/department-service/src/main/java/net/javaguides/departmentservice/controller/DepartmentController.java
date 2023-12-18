@@ -1,5 +1,6 @@
-package com.sunitha.cg.department.controller;
+package net.javaguides.departmentservice.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sunitha.cg.department.service.DepartmentService;
-
 import lombok.AllArgsConstructor;
+import net.javaguides.departmentservice.dto.DepartmentDto;
+import net.javaguides.departmentservice.service.DepartmentService;
 
 @RestController
 @RequestMapping("/api/departments")
@@ -27,6 +28,8 @@ public class DepartmentController {
 		return new ResponseEntity<>(savedDepartment, HttpStatus.CREATED);
 
 	}
+	
+	
 
 	// Build find by id from Department
 //	@GetMapping({id})
