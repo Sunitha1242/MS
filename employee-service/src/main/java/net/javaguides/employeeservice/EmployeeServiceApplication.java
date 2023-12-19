@@ -2,6 +2,7 @@ package net.javaguides.employeeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 //import org.springframework.web.client.RestTemplate;
@@ -10,7 +11,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
 //@OpenAPIDefinition
-@EnableEurekaClient
+@EnableDiscoveryClient
 public class EmployeeServiceApplication {
 
 //	This is configured using REST TEMPLATE--it is going to be deprecated soon
